@@ -1,0 +1,113 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.264);
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: -1;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.modal-active {
+    opacity: 3;
+    z-index: 3;
+}
+
+.modal-window {
+    position: relative;
+    width: 300px;
+    background: var(--button-color);
+    padding: 10px;
+    border-radius: 3px;
+    transition: all 0.4s;
+    transform: scale(0.1);
+}
+
+.modal-active .modal-window {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.modal-window h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modal__descr {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.modal-window input,
+.modal-window textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.modal .modal-window textarea {
+    width: 100%;
+    padding: 5px;
+    background: var(--white);
+    border-radius: 3px;
+    font-family: inherit;
+    resize: none;
+    overflow-y: auto;
+    min-height: 80px;
+    transition: border-color 0.3s ease;
+}
+
+.modal__positiv-message {
+    position: fixed;
+    display: none;
+    z-index: 500;
+    top: 130px;
+    left: -250px;
+    background: rgb(0, 190, 0);
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.7s;
+}
+
+.modal__positiv-message p {
+    color: white;
+    font-size: 17px;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.pozitiv-active {
+    z-index: 500;
+    left: 0px;
+}
+
+.pozitiv-active p {
+    transition: all 1.7s;
+    display: block;
+}

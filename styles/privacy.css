@@ -1,0 +1,430 @@
+/* ========================================
+   ПЕРЕМЕННЫЕ
+======================================== */
+:root {
+    --primary-color: #FF4D01;
+    --button-color: rgba(255, 77, 1, 1);
+    --text-dark: #1a1a1a;
+    --text-gray: #666;
+    --bg-light: #f8f8f8;
+    --border-color: #e0e0e0;
+    --white: #ffffff;
+}
+
+/* ========================================
+   ОСНОВНЫЕ СТИЛИ КОНТЕЙНЕРА
+======================================== */
+.privacy {
+    margin: 0 auto;
+    padding: 160px 20px !important;
+    background-color: #ff4d011f;
+}
+
+/* ========================================
+   СЕКЦИИ
+======================================== */
+.privacy section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.privacy section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(255, 77, 1, 0.1);
+}
+
+/* Первая секция - введение */
+.privacy section:first-of-type {
+    border-left: none;
+    background: none;
+    color: var(--white);
+    padding: 40px;
+    text-align: center;
+}
+
+.privacy section:first-of-type p {
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.privacy section:first-of-type strong {
+    font-size: 22px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* ========================================
+   ЗАГОЛОВКИ
+======================================== */
+.privacy h2 {
+    color: var(--primary-color);
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.privacy h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--button-color);
+    border-radius: 2px;
+}
+
+/* ========================================
+   ПАРАГРАФЫ
+======================================== */
+.privacy p {
+    color: black;
+    font-size: 18px;
+    line-height: 35px;
+    margin-bottom: 15px;
+}
+
+.privacy strong {
+    color: var(--button-color);
+    font-weight: 500;
+}
+
+/* ========================================
+   СПИСКИ
+======================================== */
+.privacy ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.privacy ul li {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 35px;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.privacy ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* ========================================
+   СЕКЦИЯ "КОНТАКТ"
+======================================== */
+.privacy section:last-of-type {
+    background: none;
+    border-left: none;
+    color: black;
+    text-align: center;
+}
+
+.privacy section:last-of-type p {
+    color: black;
+    margin: 0;
+}
+
+.privacy section:last-of-type strong {
+    color: var(--button-color);
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: rgba(255, 77, 1, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.privacy section:last-of-type strong:hover {
+    background-color: rgba(255, 77, 1, 0.2);
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+======================================== */
+
+/* Планшеты (768px и меньше) */
+@media (max-width: 768px) {
+    .privacy {
+        padding: 120px 15px !important;
+    }
+
+    .privacy section {
+        padding: 25px 20px;
+        margin-bottom: 35px;
+    }
+
+    .privacy section:first-of-type {
+        padding: 30px 20px;
+    }
+
+    .privacy section:first-of-type p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .privacy section:first-of-type strong {
+        font-size: 20px;
+    }
+
+    .privacy h2 {
+        font-size: 22px;
+        padding-bottom: 12px;
+    }
+
+    .privacy h2::after {
+        width: 50px;
+    }
+
+    .privacy p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .privacy ul li {
+        font-size: 16px;
+        line-height: 30px;
+        padding-left: 25px;
+    }
+
+    .privacy section:last-of-type strong {
+        font-size: 18px;
+        padding: 10px 18px;
+    }
+}
+
+/* Мобильные устройства (480px и меньше) */
+@media (max-width: 480px) {
+    .privacy {
+        padding: 100px 10px !important;
+    }
+
+    .privacy section {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+    }
+
+    .privacy section:hover {
+        transform: translateX(3px);
+    }
+
+    .privacy section:first-of-type {
+        padding: 25px 15px;
+    }
+
+    .privacy section:first-of-type p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .privacy section:first-of-type strong {
+        font-size: 18px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    .privacy h2 {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .privacy h2::after {
+        width: 45px;
+        height: 2px;
+    }
+
+    .privacy p {
+        font-size: 15px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    .privacy ul {
+        margin: 15px 0;
+    }
+
+    .privacy ul li {
+        font-size: 15px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        padding-left: 22px;
+    }
+
+    .privacy ul li::before {
+        width: 6px;
+        height: 6px;
+        top: 9px;
+    }
+
+    .privacy section:last-of-type strong {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Очень маленькие экраны (360px и меньше) */
+@media (max-width: 360px) {
+    .privacy {
+        padding: 80px 8px !important;
+    }
+
+    .privacy section {
+        padding: 18px 12px;
+        margin-bottom: 25px;
+    }
+
+    .privacy section:first-of-type {
+        padding: 20px 12px;
+    }
+
+    .privacy section:first-of-type p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .privacy section:first-of-type strong {
+        font-size: 16px;
+    }
+
+    .privacy h2 {
+        font-size: 18px;
+    }
+
+    .privacy h2::after {
+        width: 40px;
+    }
+
+    .privacy p {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .privacy ul li {
+        font-size: 14px;
+        line-height: 26px;
+        padding-left: 20px;
+    }
+
+    .privacy section:last-of-type strong {
+        font-size: 15px;
+        padding: 7px 12px;
+    }
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+======================================== */
+
+/* Планшеты */
+@media (max-width: 768px) {
+    .privacy {
+        padding: 40px 15px;
+    }
+
+    .privacy section {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .privacy section:first-of-type {
+        padding: 30px 20px;
+    }
+
+    .privacy h2 {
+        font-size: 22px;
+    }
+
+    .privacy section:first-of-type strong {
+        font-size: 20px;
+    }
+
+    .privacy section:first-of-type p {
+        font-size: 16px;
+    }
+
+    .privacy p,
+    .privacy ul li {
+        font-size: 15px;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    .privacy {
+        padding: 30px 10px;
+    }
+
+    .privacy section {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+        border-left-width: 3px;
+    }
+
+    .privacy section:first-of-type {
+        padding: 25px 15px;
+    }
+
+    .privacy h2 {
+        font-size: 20px;
+        padding-bottom: 12px;
+    }
+
+    .privacy h2::after {
+        width: 50px;
+        height: 2px;
+    }
+
+    .privacy section:first-of-type strong {
+        font-size: 18px;
+    }
+
+    .privacy section:first-of-type p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .privacy p,
+    .privacy ul li {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .privacy ul li {
+        padding-left: 25px;
+    }
+
+    .privacy section:last-of-type strong {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+    .privacy section {
+        padding: 15px 12px;
+    }
+
+    .privacy h2 {
+        font-size: 18px;
+    }
+}

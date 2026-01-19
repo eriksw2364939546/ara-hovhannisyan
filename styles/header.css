@@ -1,0 +1,222 @@
+header {
+    padding-top: 10px;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.818);
+}
+
+.header-logo {
+    height: 54px;
+    width: 54px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+}
+
+.header-logo img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.header-nav__items.row {
+    gap: 32px;
+
+}
+
+
+.header-nav__items a {
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0px 0px 10px 0px;
+    display: inline-block;
+    transition: color 0.4s ease;
+}
+
+
+.header-nav__items a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.4s ease;
+}
+
+.header-nav__items a:hover::after {
+    width: 100%;
+}
+
+
+.header-nav__items a:hover {
+    color: var(--button-color);
+}
+
+.header-nav__items button {
+    padding: 0 5px;
+    height: 54px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    background: var(--button-color);
+    color: var(--white);
+    border: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.header-nav__items button:hover {
+    background: var(--white);
+    color: var(--button-color);
+}
+
+
+
+/* ===== БУРГЕР МЕНЮ ===== */
+@media all and (max-width: 650px) {
+    .header-elements.row {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-nav {
+        position: relative;
+    }
+
+    /* Само меню с плавной анимацией */
+    .header-nav__items.row {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.937);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        z-index: 999;
+        padding: 80px 20px;
+        transition: right 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-nav__items.row.active {
+        right: 0;
+    }
+
+    /* Анимация элементов меню */
+    .header-nav__items a,
+    .header-nav__items button {
+        opacity: 0;
+        transform: translateX(30px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .header-nav__items.active a,
+    .header-nav__items.active button {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Задержка для каждого элемента */
+    .header-nav__items.active a:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .header-nav__items.active a:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .header-nav__items.active a:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .header-nav__items.active a:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+    .header-nav__items.active button {
+        transition-delay: 0.5s;
+    }
+
+    .header-nav__items a {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .header-nav__items button {
+        margin-top: 20px;
+        height: 56px;
+        padding: 0 30px;
+        font-size: 20px;
+    }
+
+    /* Кнопка бургера */
+    .burger-btn {
+        display: block;
+        width: 30px;
+        height: 24px;
+        position: relative;
+        z-index: 1000;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .burger-btn span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: var(--button-color);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .burger-btn span:nth-child(1) {
+        top: 0;
+    }
+
+    .burger-btn span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .burger-btn span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* Анимация бургера при открытии */
+    .burger-btn.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .burger-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-btn.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 37%;
+    }
+}
+
+/* Скрываем бургер на десктопе */
+@media all and (min-width: 651px) {
+    .burger-btn {
+        display: none;
+    }
+}

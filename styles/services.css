@@ -1,0 +1,247 @@
+.services span {
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.services-title {
+    font-weight: 400;
+    color: black;
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 0%;
+}
+
+.services-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+
+}
+
+.services-items__card {
+    max-width: 400px;
+}
+
+.services-items__card img {
+    margin-bottom: 32px;
+
+}
+
+.services-items__card h3 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    color: black;
+    margin-bottom: 14px;
+}
+
+.services-items__card p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(96, 94, 93, 1);
+    max-width: 335px;
+
+    display: block;
+    max-height: 90px;
+    /* 3 линии × 30px */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: max-height 1s ease;
+}
+
+/* Добавляем три точки в конце */
+.services-items__card p::after {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-left: 10px;
+    background: white;
+    /* фон совпадает с фоном контейнера */
+}
+
+/* Разворачиваем текст */
+.services-items__card p.expanded {
+    max-height: 1000px;
+    /* достаточно, чтобы вместить весь текст */
+}
+
+/* Убираем точки при развороте */
+.services-items__card p.expanded::after {
+    content: '';
+}
+
+/* Планшеты большие (768px - 1024px) - 3 колонки */
+@media all and (max-width: 1024px) {
+    .services-title {
+        font-size: 30px;
+        line-height: 48px;
+    }
+
+    .services-items {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+
+    .services-items__card h3 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 48px;
+        letter-spacing: 0%;
+        color: black;
+        margin-bottom: 14px;
+
+    }
+
+    .services-items__card p {
+        max-width: 100%;
+        font-size: 17px;
+        line-height: 28px;
+        max-height: 84px;
+
+
+        /* 3 линии × 28px */
+    }
+}
+
+/* Планшеты средние (600px - 768px) - 3 колонки, кнопка под заголовком */
+@media all and (max-width: 768px) {
+    .services span {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .services-title {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+
+
+
+
+    .services-items {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .services-items__card img {
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .services-items__card h3 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+
+    .services-items__card p {
+        font-size: 16px;
+        line-height: 26px;
+        max-height: 78px;
+        /* 3 линии × 26px */
+    }
+}
+
+/* Мобильные устройства (до 600px) - 1 колонка */
+@media all and (max-width: 600px) {
+    .services span {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .services-header {
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    .services-title {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .services-btn {
+        max-width: 100%;
+    }
+
+    .services-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .services-items__card img {
+        width: 50px;
+        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    .services-items__card h3 {
+        font-size: 24px;
+        line-height: 34px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .services-items__card p {
+        font-size: 16px;
+        line-height: 26px;
+        max-height: 78px;
+        text-align: center;
+        /* 3 линии × 26px */
+    }
+}
+
+/* Очень маленькие экраны (до 400px) */
+@media all and (max-width: 400px) {
+    .services span {
+        font-size: 14px;
+    }
+
+    .services-title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .services-items__card h3 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .services-header__btns {
+        width: 100%;
+    }
+
+    .services-btn {
+        max-width: 100%;
+    }
+}
