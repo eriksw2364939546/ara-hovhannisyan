@@ -1,0 +1,36 @@
+.call-button {
+    display: none;
+}
+
+@media all and (max-width: 768px) {
+    .call-button {
+        position: fixed;
+        bottom: 10px;
+        left: 35px;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.818);
+        border: 2px solid #FF4D01;
+
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.486);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .call-button:hover {
+        background-color: #128c7e;
+        /* Темнее при наведении */
+        transform: translateX(-50%) scale(1.1);
+    }
+
+    .call-button img {
+        width: 30px;
+        height: 30px;
+        filter: brightness(0) invert(1);
+    }
+}

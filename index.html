@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="./styles/contact-form.css">
     <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/call-button.css">
 </head>
 
 <body>
@@ -249,7 +250,7 @@
                             </div>
                             <div class="row">
                                 <img src="./images/why-us-pattern-vector.png" alt="Vector">
-                                <p>Plus de 400 projets menés à bien</p>
+                                <p>Plus de 350 projets menés à bien</p>
                             </div>
                             <div class="row">
                                 <img src="./images/why-us-pattern-vector.png" alt="Vector">
@@ -273,7 +274,7 @@
                     <h2>Les résultats <br> de notre projet <br> parlent d'eux-mêmes</h2>
                     <div class="past-projects__header-btns">
                         <button class="past-projects__btn btn-1 open-modal">Obtenez un devis</button>
-                        <button class="past-projects__btn btn-2">Nos services</button>
+                        <a href="#services" class="past-projects__btn btn-2">Nos services</a>
                     </div>
 
                 </div>
@@ -411,7 +412,9 @@
                     <h3 class="footer-item__title">Pages utilitaires</h3>
 
                     <div class="footer-item__elems">
-                        <a href="./privacy-policy.html">Politique de confidentialité</a>
+                        <a class="footer-links__pages" href="./politique-de-confidentialité.html">Politique de
+                            confidentialité</a>
+                        <a class="footer-links__pages" href="./mentions-légales.html">Mentions légales</a>
                     </div>
                 </div>
 
@@ -419,19 +422,19 @@
                     <h3 class="footer-item__title">Contactez-nous</h3>
 
                     <div class="footer-item__elems footer-item__contact">
-                        <a href="tel:+33761551779">
-                            <img src="./images/telephone-call.png" alt="">
+                        <a href="tel:+33783239262">
+                            <img src="./images/telephone-call.png" alt="Telephone">
                             <div class="footer-item__contact-el">
                                 <p>Appelez-nous</p>
                                 <p>07 83 23 92 62</p>
                             </div>
                         </a>
 
-                        <a href="mailto:ara.hovhannisyan@gmail.com">
+                        <a href="mailto:hannisyan1978@gmail.com">
                             <img src="./images/email.png" alt="E-mail">
                             <div class="footer-item__contact-el">
                                 <p>Envoyez-nous un e-mail</p>
-                                <p>ara.hovhannisyan@gmail.com</p>
+                                <p>hannisyan1978@gmail.com</p>
                             </div>
                         </a>
 
@@ -479,6 +482,10 @@
             </form>
         </div>
     </div>
+
+    <a href="tel:+33783239262" class="call-button">
+        <img src="./images/phone-call.svg" alt="Appeler">
+    </a>
     <script type="module" src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./scripts/slider.js"></script>

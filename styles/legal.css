@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #FF4D01;
+    --button-color: rgba(255, 77, 1, 1);
+    --white: #ffffff;
+}
+
+.legal {
+    margin: 0 auto;
+    padding: 160px 20px !important;
+    background: #ff733715;
+}
+
+.legal section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legal section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 20px rgba(255, 77, 1, 0.1);
+}
+
+.legal section:first-of-type {
+    background: none;
+    padding: 40px;
+    text-align: center;
+}
+
+.legal section:first-of-type p {
+    color: black;
+    font-size: 18px;
+}
+
+.legal h2 {
+    color: var(--primary-color);
+    font-size: 26px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.legal h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--button-color);
+}
+
+.legal p {
+    font-size: 18px;
+    line-height: 35px;
+    color: black;
+}
+
+.legal strong {
+    color: var(--button-color);
+}
+
+.legal section:last-of-type {
+    background: none;
+    text-align: center;
+}
+
+.legal section:last-of-type strong {
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: rgba(255, 77, 1, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.legal section:last-of-type strong:hover {
+    background-color: rgba(255, 77, 1, 0.2);
+}

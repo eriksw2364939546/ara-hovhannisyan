@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/privacy.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/contact-form.css">
+    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
@@ -52,9 +54,9 @@
                 <h2>Responsable du traitement</h2>
                 <p>
                     DALAS RENOV<br>
-                    Adresse : [Adresse de l’entreprise]<br>
-                    Email : [email@exemple.fr]<br>
-                    Téléphone : [Numéro]
+                    Adresse : 7Bd Velasquez 13008 Marseille<br>
+                    Email : hannisyan1978@gmail.com<br>
+                    Téléphone : 07 83 23 92 62
                 </p>
             </section>
 
@@ -89,7 +91,7 @@
                 <h2>Contact</h2>
                 <p>
                     Pour toute question, contactez-nous à :
-                    <strong>[ara.hovhannisyan@gmail.com]</strong>
+                    <strong>hannisyan1978@gmail.com</strong>
                 </p>
             </section>
         </div>
@@ -117,7 +119,9 @@
                     <h3 class="footer-item__title">Pages utilitaires</h3>
 
                     <div class="footer-item__elems">
-                        <a href="./privacy-policy.html">Politique de confidentialité</a>
+                        <a href="./politique-de-confidentialité.html">Politique de confidentialité</a>
+                        <a href="./mentions-légales.html">Mentions légales</a>
+
                     </div>
                 </div>
 
@@ -125,19 +129,19 @@
                     <h3 class="footer-item__title">Contactez-nous</h3>
 
                     <div class="footer-item__elems footer-item__contact">
-                        <a href="tel:+33761551779">
-                            <img src="./images/telephone-call.png" alt="">
+                        <a href="tel:+33783239262">
+                            <img src="./images/telephone-call.png" alt="Telephone">
                             <div class="footer-item__contact-el">
                                 <p>Appelez-nous</p>
                                 <p>07 83 23 92 62</p>
                             </div>
                         </a>
 
-                        <a href="mailto:ara.hovhannisyan@gmail.com">
+                        <a href="mailto:hannisyan1978@gmail.com">
                             <img src="./images/email.png" alt="E-mail">
                             <div class="footer-item__contact-el">
                                 <p>Envoyez-nous un e-mail</p>
-                                <p>ara.hovhannisyan@gmail.com</p>
+                                <p>hannisyan1978@gmail.com</p>
                             </div>
                         </a>
 
@@ -151,6 +155,40 @@
         </div>
 
     </footer>
+
+    <div class="modal">
+        <div class="modal__positiv-message">
+            <p>Merci pour votre choix <br> Votre message a été envoyé !!!</p>
+        </div>
+        <div class="modal-window">
+            <span class="close-modal">&times;</span>
+            <h3>Contactez-nous</h3>
+            <p class="modal__descr">
+                Contactez-nous et obtenez une consultation gratuite!
+            </p>
+            <form action="#" method="post" class="form">
+                <div class="form__group">
+                    <input class="modal-form__name" type="text" name="name" placeholder="Votre nom" minlength="2"
+                        maxlength="50" required title="Le nom doit contenir au moins 2 caractères" />
+                </div>
+                <div class="form__group">
+                    <input class="modal-form__email" type="email" name="email" placeholder="Email" required
+                        title="Veuillez entrer une adresse email valide" />
+                </div>
+                <div class="form__group">
+                    <input class="modal-form__phone" type="tel" name="phone"
+                        placeholder="Téléphone (ex: 06 12 34 56 78)" pattern="^(0[1-9][\d\s]{8,12}|\+33[\d\s]{9,13})$"
+                        required title="Veuillez entrer un numéro de téléphone français valide" />
+                </div>
+                <div class="form__group">
+                    <textarea class="modal-form__message" name="message" rows="5" placeholder="Votre message"
+                        minlength="10" maxlength="500" required
+                        title="Le message doit contenir au moins 10 caractères"></textarea>
+                </div>
+                <button type="submit" class="form__btn">Envoyer</button>
+            </form>
+        </div>
+    </div>
     <script type="module" src="./index.js"></script>
 </body>
 
